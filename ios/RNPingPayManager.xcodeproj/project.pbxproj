@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91798D0B1BCD16A10012AFD1 /* RCTPingxx.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91798D0A1BCD16A10012AFD1 /* RCTPingxx.h */; };
+		91798D0D1BCD16A10012AFD1 /* RCTPingxx.m in Sources */ = {isa = PBXBuildFile; fileRef = 91798D0C1BCD16A10012AFD1 /* RCTPingxx.m */; };
+		917F84F61C995F6500FEEFFE /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84E61C995F6500FEEFFE /* AlipaySDK.framework */; };
+		917F84F71C995F6500FEEFFE /* libpingpp+alipay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84E71C995F6500FEEFFE /* libpingpp+alipay.a */; };
+		917F84F81C995F6500FEEFFE /* libpingpp+applepay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84E91C995F6500FEEFFE /* libpingpp+applepay.a */; };
+		917F84F91C995F6500FEEFFE /* libpingpp+up.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84EC1C995F6500FEEFFE /* libpingpp+up.a */; };
+		917F84FA1C995F6500FEEFFE /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84ED1C995F6500FEEFFE /* libUPPayPlugin.a */; };
+		917F84FB1C995F6500FEEFFE /* libpingpp+wx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84EF1C995F6500FEEFFE /* libpingpp+wx.a */; };
+		917F84FC1C995F6500FEEFFE /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84F01C995F6500FEEFFE /* libWeChatSDK.a */; };
+		917F84FD1C995F6500FEEFFE /* libpingpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 917F84F31C995F6500FEEFFE /* libpingpp.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91798D051BCD16A10012AFD1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				91798D0B1BCD16A10012AFD1 /* RCTPingxx.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		91798D071BCD16A10012AFD1 /* libRNPingPayManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPingPayManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		91798D0A1BCD16A10012AFD1 /* RCTPingxx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTPingxx.h; sourceTree = "<group>"; };
+		91798D0C1BCD16A10012AFD1 /* RCTPingxx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTPingxx.m; sourceTree = "<group>"; };
+		917F84E51C995F6500FEEFFE /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		917F84E61C995F6500FEEFFE /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		917F84E71C995F6500FEEFFE /* libpingpp+alipay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+alipay.a"; sourceTree = "<group>"; };
+		917F84E91C995F6500FEEFFE /* libpingpp+applepay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+applepay.a"; sourceTree = "<group>"; };
+		917F84EA1C995F6500FEEFFE /* Pingpp+ApplePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pingpp+ApplePay.h"; sourceTree = "<group>"; };
+		917F84EC1C995F6500FEEFFE /* libpingpp+up.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+up.a"; sourceTree = "<group>"; };
+		917F84ED1C995F6500FEEFFE /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
+		917F84EF1C995F6500FEEFFE /* libpingpp+wx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+wx.a"; sourceTree = "<group>"; };
+		917F84F01C995F6500FEEFFE /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		917F84F11C995F6500FEEFFE /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		917F84F21C995F6500FEEFFE /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		917F84F31C995F6500FEEFFE /* libpingpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingpp.a; sourceTree = "<group>"; };
+		917F84F41C995F6500FEEFFE /* Pingpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Pingpp.bundle; sourceTree = "<group>"; };
+		917F84F51C995F6500FEEFFE /* Pingpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pingpp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91798D041BCD16A10012AFD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				917F84FC1C995F6500FEEFFE /* libWeChatSDK.a in Frameworks */,
+				917F84F61C995F6500FEEFFE /* AlipaySDK.framework in Frameworks */,
+				917F84F81C995F6500FEEFFE /* libpingpp+applepay.a in Frameworks */,
+				917F84FB1C995F6500FEEFFE /* libpingpp+wx.a in Frameworks */,
+				917F84FA1C995F6500FEEFFE /* libUPPayPlugin.a in Frameworks */,
+				917F84F91C995F6500FEEFFE /* libpingpp+up.a in Frameworks */,
+				917F84F71C995F6500FEEFFE /* libpingpp+alipay.a in Frameworks */,
+				917F84FD1C995F6500FEEFFE /* libpingpp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91798CFE1BCD16A10012AFD1 = {
+			isa = PBXGroup;
+			children = (
+				917F84E21C995F6500FEEFFE /* PingPaySDK */,
+				91798D091BCD16A10012AFD1 /* RNPingPayManager */,
+				91798D081BCD16A10012AFD1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91798D081BCD16A10012AFD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91798D071BCD16A10012AFD1 /* libRNPingPayManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91798D091BCD16A10012AFD1 /* RNPingPayManager */ = {
+			isa = PBXGroup;
+			children = (
+				91798D0A1BCD16A10012AFD1 /* RCTPingxx.h */,
+				91798D0C1BCD16A10012AFD1 /* RCTPingxx.m */,
+			);
+			path = RNPingPayManager;
+			sourceTree = "<group>";
+		};
+		917F84E21C995F6500FEEFFE /* PingPaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				917F84E31C995F6500FEEFFE /* Channels */,
+				917F84F31C995F6500FEEFFE /* libpingpp.a */,
+				917F84F41C995F6500FEEFFE /* Pingpp.bundle */,
+				917F84F51C995F6500FEEFFE /* Pingpp.h */,
+			);
+			path = PingPaySDK;
+			sourceTree = "<group>";
+		};
+		917F84E31C995F6500FEEFFE /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				917F84E41C995F6500FEEFFE /* Alipay */,
+				917F84E81C995F6500FEEFFE /* ApplePay */,
+				917F84EB1C995F6500FEEFFE /* UnionPay */,
+				917F84EE1C995F6500FEEFFE /* Wx */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		917F84E41C995F6500FEEFFE /* Alipay */ = {
+			isa = PBXGroup;
+			children = (
+				917F84E51C995F6500FEEFFE /* AlipaySDK.bundle */,
+				917F84E61C995F6500FEEFFE /* AlipaySDK.framework */,
+				917F84E71C995F6500FEEFFE /* libpingpp+alipay.a */,
+			);
+			path = Alipay;
+			sourceTree = "<group>";
+		};
+		917F84E81C995F6500FEEFFE /* ApplePay */ = {
+			isa = PBXGroup;
+			children = (
+				917F84E91C995F6500FEEFFE /* libpingpp+applepay.a */,
+				917F84EA1C995F6500FEEFFE /* Pingpp+ApplePay.h */,
+			);
+			path = ApplePay;
+			sourceTree = "<group>";
+		};
+		917F84EB1C995F6500FEEFFE /* UnionPay */ = {
+			isa = PBXGroup;
+			children = (
+				917F84EC1C995F6500FEEFFE /* libpingpp+up.a */,
+				917F84ED1C995F6500FEEFFE /* libUPPayPlugin.a */,
+			);
+			path = UnionPay;
+			sourceTree = "<group>";
+		};
+		917F84EE1C995F6500FEEFFE /* Wx */ = {
+			isa = PBXGroup;
+			children = (
+				917F84EF1C995F6500FEEFFE /* libpingpp+wx.a */,
+				917F84F01C995F6500FEEFFE /* libWeChatSDK.a */,
+				917F84F11C995F6500FEEFFE /* WXApi.h */,
+				917F84F21C995F6500FEEFFE /* WXApiObject.h */,
+			);
+			path = Wx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91798D061BCD16A10012AFD1 /* RNPingPayManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91798D101BCD16A10012AFD1 /* Build configuration list for PBXNativeTarget "RNPingPayManager" */;
+			buildPhases = (
+				91798D031BCD16A10012AFD1 /* Sources */,
+				91798D041BCD16A10012AFD1 /* Frameworks */,
+				91798D051BCD16A10012AFD1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNPingPayManager;
+			productName = RNPingPayManager;
+			productReference = 91798D071BCD16A10012AFD1 /* libRNPingPayManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91798CFF1BCD16A10012AFD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = erica;
+				TargetAttributes = {
+					91798D061BCD16A10012AFD1 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 91798D021BCD16A10012AFD1 /* Build configuration list for PBXProject "RNPingPayManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91798CFE1BCD16A10012AFD1;
+			productRefGroup = 91798D081BCD16A10012AFD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91798D061BCD16A10012AFD1 /* RNPingPayManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91798D031BCD16A10012AFD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91798D0D1BCD16A10012AFD1 /* RCTPingxx.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		91798D0E1BCD16A10012AFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		91798D0F1BCD16A10012AFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91798D111BCD16A10012AFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/Alipay",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
+					"$(SRCROOT)/PingPaySDK/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/PingPaySDK/**",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/Alipay",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/ApplePay",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/UnionPay",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/Wx",
+					"$(PROJECT_DIR)/PingPaySDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		91798D121BCD16A10012AFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/Alipay",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
+					"$(SRCROOT)/PingPaySDK/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/PingPaySDK/**",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/Alipay",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/ApplePay",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/UnionPay",
+					"$(PROJECT_DIR)/PingPaySDK/Channels/Wx",
+					"$(PROJECT_DIR)/PingPaySDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91798D021BCD16A10012AFD1 /* Build configuration list for PBXProject "RNPingPayManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91798D0E1BCD16A10012AFD1 /* Debug */,
+				91798D0F1BCD16A10012AFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91798D101BCD16A10012AFD1 /* Build configuration list for PBXNativeTarget "RNPingPayManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91798D111BCD16A10012AFD1 /* Debug */,
+				91798D121BCD16A10012AFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91798CFF1BCD16A10012AFD1 /* Project object */;
+}
