@@ -2,25 +2,41 @@
  * Created by tdzl2_000 on 2015-10-13.
  */
 
-import {NativeModules} from 'react-native';
+import {NativeModules, NativeAppEventEmitter} from 'react-native';
 
 let nativeAPI = NativeModules.Pingxx;
 
-export class PingxxError extends Error {
-    constructor(err, msg){
-        super(msg || "Error occured with QQ API.");
-        this.err = err;
-    }
+let savedCallback = undefined;
+
+NativeAppEventEmitter.addListener('Pingxx_Resp', resp => {
+    const callback = savedCallback;
+    savedCallback = undefined;
+    callback && callback(resp);
+});
+
+function waitForResponse() {
+    return new Promise((resolve, reject) => {
+        if (savedCallback) {
+            savedCallback('User canceled.');
+        }
+        savedCallback = r => {
+            savedCallback = undefined;
+            const {result, errCode, errMsg} = r;
+
+            if (result && result === 'success') {
+                resolve(result);
+            }
+            else {
+                const err = new Error(errMsg);
+                err.errCode = errCode;
+                reject(err);
+            }
+        };
+    });
 }
 
-function translateError(e){
-    if (typeof(e) == 'object' && !(e instanceof  Error)){
-        throw new PingxxError(e.err, e.errMsg);
-    }
-}
 
-export function pay(charge){
-    return new Promise((resolve, reject)=>{
-        nativeAPI.pay(JSON.stringify(charge), resolve, reject)
-    }).catch(translateError)
+export async function pay(charge){
+    nativeAPI.pay(JSON.stringify(charge));
+    return await waitForResponse();
 }

@@ -52,17 +52,11 @@ RCT_EXPORT_MODULE();
     NSString *url = userInfo[@"url"];
     
     [Pingpp handleOpenURL:[NSURL URLWithString:url] withCompletion:^(NSString *result, PingppError *error) {
-        NSMutableDictionary *body = @{}.mutableCopy;
-        if (error) {
-            body[@"errCode"] = @(error.code);
-            body[@"errMsg"] = error.description;
-        }
-        body[@"result"] = result;
-        [self.bridge.eventDispatcher sendAppEventWithName:@"Pingxx_Resp" body:body];
+        [self onResult:result erorr:error];
     }];
 }
 
-RCT_EXPORT_METHOD(pay:(NSString *)charge resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(pay:(NSString *)charge)
 {
 #ifdef DEBUG
     [Pingpp setDebugMode:YES];
@@ -73,16 +67,19 @@ RCT_EXPORT_METHOD(pay:(NSString *)charge resolve:(RCTPromiseResolveBlock)resolve
            viewController:controller
              appURLScheme:gScheme
            withCompletion:^(NSString *result, PingppError *error) {
-               if ([result isEqualToString:@"success"]) {
-                   if (resolve) {
-                       resolve(@[result]);
-                   }
-               } else {
-                   if (reject) {
-                       reject([NSString stringWithFormat:@"%d",error.code], [error getMsg], nil);
-                   }
-               }
+               [self onResult:result erorr:error];
     }];
+}
+
+- (void)onResult:(NSString *)result erorr:(PingppError *)error
+{
+    NSMutableDictionary *body = @{}.mutableCopy;
+    body[@"result"] = result;
+    if (![result isEqualToString:@"success"]) {
+        body[@"errCode"] = @(error.code);
+        body[@"errMsg"] = error.description;
+    }
+    [self.bridge.eventDispatcher sendAppEventWithName:@"Pingxx_Resp" body:body];
 }
 
 - (void)_autoGetScheme

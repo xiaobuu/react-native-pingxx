@@ -6,16 +6,12 @@ import android.content.Intent;
 
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.Callback;
-import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.modules.core.RCTNativeAppEventEmitter;
 import com.pingplusplus.android.PaymentActivity;
-import com.tencent.mm.sdk.modelbase.BaseResp;
 
 /**
  * Created by tdzl2_000 on 2015-10-13.
@@ -65,12 +61,11 @@ public class PingxxModule extends ReactContextBaseJavaModule implements Activity
         if (result != null) {
             RCTNativeAppEventEmitter emitter = getReactApplicationContext().getJSModule(RCTNativeAppEventEmitter.class);
             WritableMap map = Arguments.createMap();
-            if (result.equals("success")) {
-                map.putString("result", result);
-            }
-            else {
-                map.putString("err", result);
+            map.putString("result", result);
+            if (!result.equals("success")) {
+                map.putInt("errCode", data.getExtras().getInt("code"));
                 map.putString("errMsg", data.getExtras().getString("error_msg"));
+                map.putString("extraMsg", data.getExtras().getString("extra_msg"));
             }
             emitter.emit("Pingxx_Resp", map);
         }
