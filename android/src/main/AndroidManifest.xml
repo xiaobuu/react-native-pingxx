@@ -20,7 +20,7 @@
 
         <!-- 微信支付 -->
         <activity-alias
-            android:name=".wxapi.WXPayEntryActivity"
+            android:name="${applicationId}.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:targetActivity="com.pingplusplus.android.PaymentActivity" />
 
