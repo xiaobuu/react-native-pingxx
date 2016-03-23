@@ -62,7 +62,7 @@ RCT_EXPORT_MODULE();
     }];
 }
 
-RCT_EXPORT_METHOD(pay:(NSString *)charge resolve:(RCTResponseSenderBlock)resolve reject:(RCTResponseSenderBlock)reject)
+RCT_EXPORT_METHOD(pay:(NSString *)charge resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
 #ifdef DEBUG
     [Pingpp setDebugMode:YES];
@@ -79,7 +79,7 @@ RCT_EXPORT_METHOD(pay:(NSString *)charge resolve:(RCTResponseSenderBlock)resolve
                    }
                } else {
                    if (reject) {
-                       reject(@[@{@"err":@(error.code),@"errMsg":error.getMsg}]);
+                       reject([NSString stringWithFormat:@"%d",error.code], [error getMsg], nil);
                    }
                }
     }];
