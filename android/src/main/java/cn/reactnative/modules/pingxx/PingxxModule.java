@@ -32,28 +32,20 @@ public class PingxxModule extends ReactContextBaseJavaModule implements Activity
     @Override
     public void initialize() {
         super.initialize();
+        getReactApplicationContext().addActivityEventListener(this);
     }
 
     @Override
     public void onCatalystInstanceDestroy() {
         super.onCatalystInstanceDestroy();
+        getReactApplicationContext().removeActivityEventListener(this);
     }
 
     @ReactMethod
     public void pay(String charge){
-        Intent intent = new Intent();
-        String packageName = this.getReactApplicationContext().getPackageName();
-        ComponentName componentName = new ComponentName(packageName, packageName + ".wxapi.WXPayEntryActivity");
-        intent.setComponent(componentName);
+        Intent intent = new Intent(getCurrentActivity(), PaymentActivity.class);
         intent.putExtra(PaymentActivity.EXTRA_CHARGE, charge);
         getCurrentActivity().startActivityForResult(intent, REQUEST_CODE_PAYMENT);
-    }
-
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_CODE_PAYMENT && resultCode == Activity.RESULT_OK) {
-            this.handleResultData(data);
-        }
     }
 
     private void handleResultData(Intent data) {
@@ -68,6 +60,13 @@ public class PingxxModule extends ReactContextBaseJavaModule implements Activity
                 map.putString("extraMsg", data.getExtras().getString("extra_msg"));
             }
             emitter.emit("Pingxx_Resp", map);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_PAYMENT && resultCode == Activity.RESULT_OK) {
+            this.handleResultData(data);
         }
     }
 }
