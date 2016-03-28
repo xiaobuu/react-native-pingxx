@@ -37,6 +37,11 @@ function waitForResponse() {
 
 
 export async function pay(charge){
-    nativeAPI.pay(JSON.stringify(charge));
+    if(typeof charge === 'string') {
+        nativeAPI.pay(charge);
+    }
+    else {
+        nativeAPI.pay(JSON.stringify(charge));
+    }
     return await waitForResponse();
 }
