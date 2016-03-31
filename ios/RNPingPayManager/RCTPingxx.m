@@ -11,8 +11,6 @@
 #import "RCTEventDispatcher.h"
 #import "RCTBridge.h"
 
-#define RCTPingxxAppKey @"app_PubjX1GSyzrPrXrb"
-
 static NSString *gScheme = @"";
 
 @interface RCTPingxx()
@@ -77,7 +75,7 @@ RCT_EXPORT_METHOD(pay:(NSString *)charge)
     body[@"result"] = result;
     if (![result isEqualToString:@"success"]) {
         body[@"errCode"] = @(error.code);
-        body[@"errMsg"] = error.description;
+        body[@"errMsg"] = [error getMsg];
     }
     [self.bridge.eventDispatcher sendAppEventWithName:@"Pingxx_Resp" body:body];
 }
