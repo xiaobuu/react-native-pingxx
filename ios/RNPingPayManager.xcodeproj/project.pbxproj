@@ -324,6 +324,7 @@
 		91798D111BCD16A10012AFD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PingPaySDK/Channels/Alipay",
@@ -352,6 +353,7 @@
 		91798D121BCD16A10012AFD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PingPaySDK/Channels/Alipay",
