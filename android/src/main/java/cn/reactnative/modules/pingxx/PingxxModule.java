@@ -55,6 +55,7 @@ public class PingxxModule extends ReactContextBaseJavaModule implements Activity
             WritableMap map = Arguments.createMap();
             map.putString("result", result);
             if (!result.equals("success")) {
+                map.putString("result", result);
                 map.putInt("errCode", data.getExtras().getInt("code"));
                 map.putString("errMsg", data.getExtras().getString("error_msg"));
                 map.putString("extraMsg", data.getExtras().getString("extra_msg"));

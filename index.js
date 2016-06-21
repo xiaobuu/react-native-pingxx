@@ -17,7 +17,7 @@ NativeAppEventEmitter.addListener('Pingxx_Resp', resp => {
 function waitForResponse() {
     return new Promise((resolve, reject) => {
         if (savedCallback) {
-            savedCallback('User canceled.');
+            savedCallback({result: 'canceled'});
         }
         savedCallback = r => {
             savedCallback = undefined;
@@ -28,6 +28,7 @@ function waitForResponse() {
             }
             else {
                 const err = new Error(errMsg);
+                err.result = result;
                 err.errCode = errCode;
                 reject(err);
             }
@@ -35,13 +36,13 @@ function waitForResponse() {
     });
 }
 
-
-export async function pay(charge){
+// return promise
+export function pay(charge){
     if(typeof charge === 'string') {
         nativeAPI.pay(charge);
     }
     else {
         nativeAPI.pay(JSON.stringify(charge));
     }
-    return await waitForResponse();
+    return waitForResponse();
 }

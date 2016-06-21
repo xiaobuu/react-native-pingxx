@@ -18,12 +18,12 @@
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <!-- 微信支付 -->
+        <!-- 微信支付
         <activity-alias
             android:name="${applicationId}.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:targetActivity="com.pingplusplus.android.PaymentActivity" />
-
+        -->
         <!-- 支付宝 -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
@@ -35,10 +35,5 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="behind" />
-
-        <!-- 银联支付 -->
-        <activity android:name="com.unionpay.uppay.PayActivity" />
-
-
     </application>
 </manifest>

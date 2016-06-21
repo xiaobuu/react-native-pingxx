@@ -1,0 +1,2 @@
+include ':pingpp'
+project(':pingpp').projectDir = new File(rootProject.projectDir, '../pingpp')
