@@ -25,7 +25,9 @@ typedef NS_ENUM(NSUInteger, PingppErrorOption)
     PingppErrConnectionError,
     PingppErrUnknownError,
     PingppErrActivation,
-    PingppErrRequestTimeout
+    PingppErrRequestTimeOut,
+    PingppErrProcessing,
+    PingppErrQqNotInstalled,
 };
 
 typedef NS_ENUM(NSUInteger, PingppRequestContentTypeOption) {
@@ -100,6 +102,12 @@ typedef void (^PingppCompletion)(NSString *result, PingppError *error);
  *  @param enabled    是否启用
  */
 + (void)setDebugMode:(BOOL)enabled;
+
+/**
+*  web渠道支付成功后点击 "返回商户" 直接关闭支付页面
+*  @enabled        是否启用
+*/
++ (void)ignoreResultUrl:(BOOL)enabled;
 
 /**
  *  设置 App ID
