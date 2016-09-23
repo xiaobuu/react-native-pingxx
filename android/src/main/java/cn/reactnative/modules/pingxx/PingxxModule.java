@@ -29,6 +29,10 @@ public class PingxxModule extends ReactContextBaseJavaModule implements Activity
         return "RCTPingxx";
     }
 
+    public void onNewIntent(Intent intent) {
+
+    }
+
     @Override
     public void initialize() {
         super.initialize();
