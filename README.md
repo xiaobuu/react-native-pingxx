@@ -6,6 +6,8 @@
 
 [iOS](https://github.com/PingPlusPlus/pingpp-ios)
 
+[官方SDK配置文档](https://www.pingxx.com/docs/client/sdk/android)
+
 添加其他支付功能后，请注意参考上述官方库中的README，进行必要的配置
 
 
